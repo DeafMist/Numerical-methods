@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="sonarlint-slf4j-sonar-log-8.2.0.43778">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/JavaLibs/sonarlint-slf4j-sonar-log-8.2.0.43778.jar!/" />
+      <root url="jar://$USER_HOME$/JavaLibs/sonar-plugin-api-9.3.0.51899.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
