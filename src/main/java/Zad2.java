@@ -18,7 +18,7 @@ public final class Zad2 {
         }
     }
 
-    private static double[][] multiplyMatrixNumber(double lambda, double[][] a) {
+    public static double[][] multiplyMatrixNumber(double lambda, double[][] a) {
         int n = a.length;
         int m = a[0].length;
         double[][] res = new double[n][m];
@@ -32,7 +32,7 @@ public final class Zad2 {
         return res;
     }
 
-    private static double[][] multiplyMatrixMatrix(double[][] a, double[][] b) {
+    public static double[][] multiplyMatrixMatrix(double[][] a, double[][] b) {
         int n = a.length;
         int m = a[0].length;
         int l = b[0].length;
@@ -49,7 +49,7 @@ public final class Zad2 {
         return c;
     }
 
-    private static double[][] sumMatrixMatrix(double[][] a, double[][] b) {
+    public static double[][] sumMatrixMatrix(double[][] a, double[][] b) {
         int n = a.length;
         int m = a[0].length;
         double[][] c = new double[n][m];
@@ -63,7 +63,7 @@ public final class Zad2 {
         return c;
     }
 
-    private static double[][] transpose(double[][] a) {
+    public static double[][] transpose(double[][] a) {
         int n = a.length;
         int m = a[0].length;
 
@@ -78,7 +78,7 @@ public final class Zad2 {
         return c;
     }
 
-    private static double determinant(double[][] a) {
+    public static double determinant(double[][] a) {
         int n = a.length;
         int sign = 1;
         double res = 0;
@@ -119,7 +119,7 @@ public final class Zad2 {
         return res;
     }
 
-    private static double[][] reverse(double[][] a) {
+    public static double[][] reverse(double[][] a) {
         int n = a.length;
         double det = determinant(a);
         double[][] res = new double[n][n];
@@ -158,7 +158,21 @@ public final class Zad2 {
         return res;
     }
 
-    private static double matrixNorm1(double[][] a) {
+    public static double[][] copy(double[][] a) {
+        int n = a.length;
+        int m = a[0].length;
+        double[][] res = new double[n][m];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                res[i][j] = a[i][j];
+            }
+        }
+
+        return res;
+    }
+
+    public static double matrixNorm1(double[][] a) {
         int n = a.length;
         int m = a[0].length;
         double max = Double.NEGATIVE_INFINITY;
@@ -178,7 +192,7 @@ public final class Zad2 {
         return max;
     }
 
-    private static double matrixNorm2(double[][] a) {
+    public static double matrixNorm2(double[][] a) {
         int n = a.length;
         int m = a[0].length;
         double res = 0;
@@ -193,7 +207,7 @@ public final class Zad2 {
         return res;
     }
 
-    private static double matrixNorm3(double[][] a) {
+    public static double matrixNorm3(double[][] a) {
         int n = a.length;
         int m = a[0].length;
         double max = Double.NEGATIVE_INFINITY;
@@ -229,7 +243,7 @@ public final class Zad2 {
         return norm;
     }
 
-    private static boolean isADiagonalPredominance(double[][] a) {
+    public static boolean isADiagonalPredominance(double[][] a) {
         int n = a.length;
         boolean flag = true;
 
@@ -251,7 +265,7 @@ public final class Zad2 {
         return flag;
     }
 
-    private static Pair simpleIterationMethod(double[][] a, double[][] b, double epsi) {
+    public static Pair simpleIterationMethod(double[][] a, double[][] b, double epsi) {
         int n = a.length;
 
         double[][] E = new double[n][n];
@@ -296,7 +310,7 @@ public final class Zad2 {
         return new Pair(xi, counter);
     }
 
-    private static Pair methodSeidel(double[][] a, double[][] b, double epsi) {
+    public static Pair methodSeidel(double[][] a, double[][] b, double epsi) {
         int n = a.length;
 
         if (!isADiagonalPredominance(a)) {
@@ -343,7 +357,7 @@ public final class Zad2 {
         return new Pair(xi, counter);
     }
 
-    private static double[][] methodHouseholderQR(double[][] a, double[][] b) {
+    public static double[][] methodHouseholderQR(double[][] a, double[][] b) {
         int n = a.length;
 
         double[][] Q = new double[n][n];
@@ -441,7 +455,7 @@ public final class Zad2 {
         return x;
     }
 
-    private static double[][] methodGaussLUP(double[][] a, double[][] b) {
+    public static double[][] methodGaussLUP(double[][] a, double[][] b) {
         int n = a.length;
 
         double[][] P = new double[n][n];
@@ -519,7 +533,7 @@ public final class Zad2 {
         return x;
     }
 
-    private static void print(double[][]a) {
+    public static void print(double[][]a) {
         int n = a.length;
         int m = a[0].length;
 

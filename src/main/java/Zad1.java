@@ -12,7 +12,7 @@ public final class Zad1 {
     private static final double deltaV = 5.0013e-7;
     private static final double deltaPhi = 4.0523e-5;
 
-    private static double calcSqrt(double x) {
+    public static double calcSqrt(double x) {
         double pi = 1;
         double next = (pi + x / pi) / 2;
 
@@ -24,7 +24,7 @@ public final class Zad1 {
         return pi;
     }
 
-    private static double calcCos(double x) {
+    public static double calcCos(double x) {
         int n = 0;
         double xn = 1;
         double cur = xn;
@@ -49,7 +49,7 @@ public final class Zad1 {
             return 0;
     }
 
-    private static double calcArcTan(double x) {
+    public static double calcArcTan(double x) {
         int n = 0;
         double xn;
         double sign;
