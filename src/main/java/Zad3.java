@@ -66,15 +66,15 @@ public final class Zad3 {
             prev = next;
             next = prev - func1(prev) / func1Derivative(prev);
 
+            if (next < a || next > b){
+                next = pickOfNextX(a, b);
+            }
+
             if (func1(a) > 0 && func1(next) > 0 || func1(a) < 0 && func1(next) < 0) {
                 a = next;
             }
             else {
                 b = next;
-            }
-
-            if (next < a || next > b){
-                next = pickOfNextX(a, b);
             }
         } while (Math.abs(next - prev) > epsi);
 
