@@ -179,6 +179,11 @@ public final class Zad3 {
         );
 
         a2 = approximation();
+        System.out.println(
+                "--------Aproximation--------" + '\n' +
+                        Arrays.deepToString(a2) + '\n'
+        );
+
         x2 = methodNewton(a2, 1e-4);
         System.out.println(
                 "------------System, approximation with helper function------------" + '\n' +
